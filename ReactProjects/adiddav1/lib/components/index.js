@@ -1,27 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.css';
 
-
-class App extends React.Component {
-  state = {
-    answer: 42,
-  };
-  asyncFunc = () => {
-    return Promise.resolve(37);
-  };
-
-  async componentDidMount(){
-    this.setState({
-      answer: await this.asyncFunc()
-    })
-  };
-  render() {
-    return (
-      <h2>Hello React components -- {this.state.answer}</h2>
-    );
-  }
-}
-
+import App from './App';
 
 ReactDOM.render(
   <App />,

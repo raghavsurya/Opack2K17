@@ -15,13 +15,23 @@ describe('DataApi', () => {
     expect(articles[articleId].title).toBe(articleTitle);
   });
 
-  it('exposes authors as an object', () => {
+  it('exposes authors as an object with first name Andrew', () => {
     const authors = api.getAuthors();
     const authorId = data.authors[0].id;
     const authorName = data.authors[0].firstName;
 
   //  expect(authors).toHavePoperty(authorId);
-    expect(authors[authorId].firstName).toBe(authorName);
+    expect(authors[authorId].firstName).toBe("Andrew");
+  });
+
+  it('exposes players as an object with email raghavsurya@gmail.com', () => {
+    const players = api.getPlayers();
+    console.log(data.players);
+    const playerId = data.players[0].id;
+    const playerEmail = data.players[0].email;
+
+  //  expect(authors).toHavePoperty(authorId);
+    expect(players[playerId].email).toBe("raghavsurya@gmail.com");
   });
 
 

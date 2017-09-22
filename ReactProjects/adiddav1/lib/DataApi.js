@@ -12,10 +12,16 @@ mapIntoObject(arr){
 
   getArticles(){
     return this.mapIntoObject(this.rawData.articles);
-  }
+  };
   getAuthors(){
     return this.mapIntoObject(this.rawData.authors);
-  }
+  };
+  getPlayers(){
+    return this.mapIntoObject(JSON.parse(this.rawData).data.players);
+  };
+  getCoaches(){
+    return this.mapIntoObject(JSON.parse(this.rawData).data.coaches);
+  };
 
 }
 
